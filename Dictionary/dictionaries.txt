@@ -1,0 +1,10 @@
+dog	cho
+cat	meo
+river	song
+wave	song
+world	the gioi
+game	tro choi
+data	du lieu
+end	het
+start	bat dau
+west	huong Tay
