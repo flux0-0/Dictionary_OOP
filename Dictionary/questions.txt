@@ -1,0 +1,281 @@
+What _ you doing?
+[A] are
+[B] do
+[C] is
+[D] have
+Correct: A
+
+I _ English every day.
+[A] speaking
+[B] speak
+[C] speaks
+[D] spoke
+Correct: B
+
+The capital of France is _.
+[A] Berlin
+[B] Madrid
+[C] Paris
+[D] Rome
+Correct: C
+
+Mount Everest is the highest peak in _.
+[A] Africa
+[B] Asia
+[C] Europe
+[D] South America
+Correct: B
+
+The chemical symbol for gold is _.
+[A] Ag
+[B] Au
+[C] Cu
+[D] Fe
+Correct: B
+
+Which planet is known as the "Red Planet"?
+[A] Earth
+[B] Jupiter
+[C] Mars
+[D] Venus
+Correct: C
+
+The currency of Japan is _.
+[A] Dollar
+[B] Euro
+[C] Peso
+[D] Yen
+Correct: D
+
+How many continents are there in the world?
+[A] 5
+[B] 6
+[C] 7
+[D] 8
+Correct: C
+
+Who wrote the play "Romeo and Juliet"?
+[A] Charles Dickens
+[B] William Shakespeare
+[C] Jane Austen
+[D] Mark Twain
+Correct: B
+
+Which gas do plants absorb from the atmosphere?
+[A] Carbon dioxide
+[B] Oxygen
+[C] Nitrogen
+[D] Hydrogen
+Correct: A
+
+She _ to the gym on Mondays.
+[A] go
+[B] goes
+[C] went
+[D] going
+Correct: B
+
+They _ dinner at the moment.
+[A] has
+[B] had
+[C] have
+[D] are having
+Correct: D
+
+He _ his homework yet.
+[A] doesn't finish
+[B] didn't finished
+[C] hasn't finished
+[D] finish
+Correct: C
+
+We _ a great time last night.
+[A] had
+[B] have
+[C] has
+[D] having
+Correct: A
+
+What time _ you usually _ up?
+[A] do / get
+[B] are / getting
+[C] does / gets
+[D] have / got
+Correct: A
+
+Where _ she _ from?
+[A] is / come
+[B] does / come
+[C] do / comes
+[D] are / coming
+Correct: B
+
+_ you ever _ to Africa?
+[A] Do / been
+[B] Have / be
+[C] Are / been
+[D] Have / been
+Correct: D
+
+They _ not _ TV right now.
+[A] do / watching
+[B] are / watch
+[C] are / watching
+[D] is / watches
+Correct: C
+
+The sun _ in the East.
+[A] rise
+[B] rises
+[C] raised
+[D] raising
+Correct: B
+
+My mother _ a cake when you called.
+[A] baked
+[B] bakes
+[C] was baking
+[D] bake
+Correct: C
+
+How often _ you _ to the dentist?
+[A] do / go
+[B] does / goes
+[C] are / going
+[D] have / gone
+Correct: A
+
+I think she _ like the present.
+[A] will
+[B] would
+[C] is
+[D] does
+Correct: A
+
+He _ when the phone rang.
+[A] sleeps
+[B] slept
+[C] was sleeping
+[D] sleep
+Correct: C
+
+_ they _ a new car?
+[A] Do / buy
+[B] Did / bought
+[C] Have / bought
+[D] Did / buy
+Correct: D
+
+It _ snowing since early morning.
+[A] have
+[B] has been
+[C] had been
+[D] are
+Correct: B
+
+What _ you _ last weekend?
+[A] did / did
+[B] do / do
+[C] did / do
+[D] are / doing
+Correct: C
+
+She _ her keys in the car.
+[A] locks
+[B] locked
+[C] has locked
+[D] is locking
+Correct: B
+
+I _ to the radio every morning.
+[A] listen
+[B] listens
+[C] am listening
+[D] listened
+Correct: A
+
+_ you ever _ a UFO?
+[A] Have / seen
+[B] Do / see
+[C] Are / seeing
+[D] Did / saw
+Correct: A
+
+We _ in the same house for 20 years.
+[A] live
+[B] lives
+[C] have lived
+[D] are living
+Correct: C
+
+Tom _ when we arrived at his house.
+[A] sleeping
+[B] sleeps
+[C] was sleeping
+[D] sleep
+Correct: C
+
+How long _ you _ this book?
+[A] do / read
+[B] are / reading
+[C] have / read
+[D] have / been reading
+Correct: D
+
+The kids _ in the park when it started to rain heavily.
+[A] play
+[B] plays
+[C] were playing
+[D] played
+Correct: C
+
+By the time we got to the cinema, the film _.
+[A] start
+[B] had started
+[C] has started
+[D] was starting
+Correct: B
+
+_ to the party tomorrow night?
+[A] Will you come
+[B] Do you come
+[C] Are you coming
+[D] Have you come
+Correct: A
+
+They _ dinner by the time we arrived.
+[A] had already finished
+[B] have already finished
+[C] finished
+[D] were finishing
+Correct: A
+
+What _ when I called you last night?
+[A] you do
+[B] do you do
+[C] were you doing
+[D] did you do
+Correct: C
+
+I can't believe she _ the entire cake by herself!
+[A] eats
+[B] ate
+[C] has eaten
+[D] was eating
+Correct: B
+
+By this time next week, I _ all my exams.
+[A] will finish
+[B] finish
+[C] will have finished
+[D] have finished
+Correct: C
+
+She _ her phone at home, so she didn't get your message.
+[A] left
+[B] has left
+[C] was leaving
+[D] leaves
+Correct: A
+
+
