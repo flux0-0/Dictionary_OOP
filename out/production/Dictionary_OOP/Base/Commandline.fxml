@@ -16,72 +16,78 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="720.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="61.0" prefWidth="720.0" style="-fx-background-color: #2a3140;" styleClass="header_logo" stylesheets="@container.css">
          <children>
-            <Label layoutX="14.0" layoutY="12.0" text="UET DIC" textFill="WHITE">
+            <Label layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="146.0" text="UET DIC" textAlignment="CENTER" textFill="#42bdff">
                <font>
-                  <Font name="Arial Bold" size="24.0" />
+                  <Font name="Arial Bold" size="34.0" />
                </font>
             </Label>
-            <ImageView fitHeight="38.0" fitWidth="78.0" layoutX="668.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../icons/istockphoto-1131230925-612x612.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
       <AnchorPane layoutY="50.0" prefHeight="430.0" prefWidth="152.0" style="-fx-background-color: #2a3140;">
          <children>
-            <Button layoutX="3.0" layoutY="96.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="146.0" text="Searcher" textFill="#141414" wrapText="true" AnchorPane.rightAnchor="3.0">
-               <graphic>
-                  <ImageView fitHeight="68.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../icons/icons8_Search_48px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="3.0" layoutY="96.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textFill="#141414" wrapText="true">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
-            <Button layoutX="3.0" layoutY="181.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="146.0" text="Show all word" textAlignment="CENTER" wrapText="true">
-               <graphic>
-                  <ImageView fitHeight="64.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../icons/icons8_Clock_52px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="3.0" layoutY="12.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="146.0" text="Insert word">
-               <graphic>
-                  <ImageView fitHeight="66.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../icons/icons8_Edit_52px_white.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="3.0" layoutY="264.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="146.0" text="Game" textFill="#232525">
-               <graphic>
-                  <ImageView fitHeight="68.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../icons/icons8_Bookmark_Page_50px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutX="3.0" layoutY="347.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="146.0" text="More" textFill="#292b2c">
-               <graphic>
-                  <ImageView fitHeight="68.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../icons/icons8_Plus_Math_52px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="3.0" layoutY="181.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textAlignment="CENTER" wrapText="true" />
+            <Button alignment="CENTER_RIGHT" layoutX="3.0" layoutY="12.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" wrapText="true" />
+            <Button alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="264.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textFill="#232525" wrapText="true" />
+            <Button alignment="CENTER_RIGHT" layoutX="3.0" layoutY="347.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textFill="#292b2c" wrapText="true" />
+            <ImageView fitHeight="55.0" fitWidth="52.0" layoutX="9.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../icons/icons8_Bookmark_Page_50px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="52.0" layoutX="9.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../icons/icons8_Search_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="52.0" layoutX="9.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../icons/icons8_Plus_Math_52px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="52.0" layoutX="9.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../icons/icons8_Edit_52px_white.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="52.0" layoutX="9.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../icons/icons8_Clock_52px.png" />
+               </image>
+            </ImageView>
+            <Text fill="#fcf9f9" layoutX="70.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#fcf9f9" layoutX="70.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#fcf9f9" layoutX="70.0" layoutY="212.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="SHOW ALL WORD" wrappingWidth="88.55859375">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#fcf9f9" layoutX="70.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#fcf9f9" layoutX="70.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSERT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
          </children></AnchorPane>
       <TextField layoutX="190.0" layoutY="151.0" prefHeight="38.0" prefWidth="246.0" />
       <Text layoutX="190.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEARCH">
