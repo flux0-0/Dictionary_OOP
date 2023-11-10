@@ -18,7 +18,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="61.0" prefWidth="720.0" style="-fx-background-color: #2a3140;" styleClass="header_logo" stylesheets="@container.css">
+      <AnchorPane prefHeight="61.0" prefWidth="720.0" style="-fx-background-color: #2a3140;" styleClass="header_logo" stylesheets="@../CSS/container.css">
          <children>
             <Label layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="146.0" text="UET DIC" textAlignment="CENTER" textFill="#42bdff">
                <font>
@@ -27,17 +27,17 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="50.0" prefHeight="430.0" prefWidth="152.0" style="-fx-background-color: #2a3140;">
+      <AnchorPane layoutY="56.0" prefHeight="425.0" prefWidth="159.0" style="-fx-background-color: #2a3140;">
          <children>
-            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="3.0" layoutY="96.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textFill="#141414" wrapText="true">
+            <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="3.0" layoutY="99.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textFill="#141414" wrapText="true">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
             <Button alignment="CENTER_RIGHT" layoutX="3.0" layoutY="181.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textAlignment="CENTER" wrapText="true" />
-            <Button alignment="CENTER_RIGHT" layoutX="3.0" layoutY="12.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" wrapText="true" />
+            <Button alignment="CENTER_RIGHT" layoutX="3.0" layoutY="13.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" wrapText="true" />
             <Button alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="264.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textFill="#232525" wrapText="true" />
-            <Button alignment="CENTER_RIGHT" layoutX="3.0" layoutY="347.0" mnemonicParsing="false" opacity="0.0" prefHeight="78.0" prefWidth="146.0" textFill="#292b2c" wrapText="true" />
+            <Button alignment="CENTER_RIGHT" layoutX="3.0" layoutY="347.0" mnemonicParsing="false" opacity="0.0" prefHeight="68.0" prefWidth="146.0" textFill="#292b2c" wrapText="true" />
             <ImageView fitHeight="55.0" fitWidth="52.0" layoutX="9.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../icons/icons8_Bookmark_Page_50px.png" />
