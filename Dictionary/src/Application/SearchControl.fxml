@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.SearchControl">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="13.0" prefHeight="58.0" prefWidth="196.0">
+         <children>
+            <TextField layoutX="-3.0" layoutY="3.0" prefHeight="52.0" prefWidth="196.0" promptText="Tra từ" />
+            <Button layoutX="130.0" layoutY="6.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="55.0">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/pngtree-magnifying-glass-icon-image_1128382.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ListView layoutX="8.0" layoutY="82.0" prefHeight="387.0" prefWidth="705.0" />
+      <Label layoutX="20.0" layoutY="82.0" prefHeight="114.0" prefWidth="668.0" text="Nghĩa của từ">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Button layoutX="471.0" layoutY="13.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="70.0">
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Edit_52px_2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="553.0" layoutY="13.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="70.0">
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Star_Filled_52px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="636.0" layoutY="13.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="70.0">
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8_Trash_52px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
