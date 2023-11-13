@@ -29,7 +29,7 @@
       </AnchorPane>
       <AnchorPane layoutY="59.0" prefHeight="424.0" prefWidth="125.0" style="-fx-background-color: #2a3140;">
          <children>
-            <Button fx:id="search" layoutY="6.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="79.0" textFill="#0a0a0a">
+            <Button fx:id="search" layoutY="15.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="79.0" textFill="#0a0a0a">
                <graphic>
                   <ImageView fitHeight="46.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
                      <image>
@@ -38,43 +38,25 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutY="64.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="79.0">
+            <Button layoutY="76.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="79.0" textOverrun="CLIP">
                <graphic>
-                  <ImageView fitHeight="48.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="46.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/pngtree-search-job-icon-searching-abstract-png-image_8474601.png" />
+                        <Image url="@../img/pngtree-vector-clock-icon-png-image_322077.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutY="125.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="79.0" textOverrun="CLIP">
+            <Button layoutY="143.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="79.0">
                <graphic>
-                  <ImageView fitHeight="47.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/pngtree-add-vector-icon-png-image_470700.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutY="245.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="79.0">
-               <graphic>
-                  <ImageView fitHeight="48.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../img/pngtree-cartoon-trash-can-icon-design-image_1251439.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button layoutY="307.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="79.0">
-               <graphic>
-                  <ImageView fitHeight="48.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="43.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../img/pngtree-book-icon-png-image_5143094.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutY="368.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="79.0">
+            <Button layoutY="212.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="79.0">
                <graphic>
                   <ImageView fitHeight="48.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -83,50 +65,45 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="search1" layoutY="186.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="79.0" textFill="#0a0a0a">
+            <Text fill="WHITE" layoutX="86.0" layoutY="48.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Seach" wrappingWidth="65.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#eeeeee" layoutX="86.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game" wrappingWidth="65.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="86.0" layoutY="110.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="History" wrappingWidth="65.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="86.0" layoutY="177.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Show all" wrappingWidth="65.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button layoutX="14.0" layoutY="371.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="41.0">
                <graphic>
-                  <ImageView fitHeight="46.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/pngtree-edit-icon-in-trendy-style-isolated-background-png-image_1536522.png" />
+                        <Image url="@../img/icons8_Settings_50px_3.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Text fill="WHITE" layoutX="86.0" layoutY="38.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Seach" wrappingWidth="65.13671875">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#eeeeee" layoutX="86.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lookup" wrappingWidth="65.13671875">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#eeeeee" layoutX="86.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert" wrappingWidth="65.13671875">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#eeeeee" layoutX="86.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit" wrappingWidth="65.13671875">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#eeeeee" layoutX="86.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete" wrappingWidth="65.13671875">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#eeeeee" layoutX="86.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show all" wrappingWidth="65.13671875">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <Text fill="#eeeeee" layoutX="86.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game" wrappingWidth="65.13671875">
+            <Text fill="#eeeeee" layoutX="69.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting" wrappingWidth="65.13671875">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
          </children></AnchorPane>
+      <ImageView fitHeight="397.0" fitWidth="480.0" layoutX="218.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/lovepik-hand-painted-book-png-image_400237957_wh1200.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

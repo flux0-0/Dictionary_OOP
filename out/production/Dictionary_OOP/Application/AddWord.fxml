@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.DeleteWordControler">
+    <children>
+        <VBox prefHeight="480.0" prefWidth="720.0">
+            <children>
+                <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="AddWord">
+                            <content>
+                                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="720.0">
+                                    <children>
+                                        <VBox prefHeight="270.0" prefWidth="720.0">
+                                            <children>
+                                                <AnchorPane prefHeight="452.0" prefWidth="720.0">
+                                                    <children>
+                                                        <Label layoutX="60.0" layoutY="20.0" prefHeight="41.0" prefWidth="140.0" text="Dictionary" textAlignment="CENTER" textFill="#2e789e">
+                                                            <font>
+                                                                <Font size="29.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton layoutX="53.0" layoutY="77.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="86.0" text="Anh - Việt" />
+                                                        <RadioButton layoutX="157.0" layoutY="77.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="84.0" text="Việt - Anh" />
+                                                        <Label layoutX="407.0" layoutY="20.0" prefHeight="41.0" prefWidth="140.0" text="Spelling" textAlignment="CENTER" textFill="#2e789e">
+                                                            <font>
+                                                                <Font size="29.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField layoutX="407.0" layoutY="73.0" />
+                                                        <Button layoutX="567.0" layoutY="73.0" mnemonicParsing="false" text="Add" />
+                                                        <AnchorPane layoutX="39.0" layoutY="126.0" prefHeight="282.0" prefWidth="642.0">
+                                                            <children>
+                                                                <WebView prefHeight="284.0" prefWidth="642.0" />
+                                                                <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="286.0" prefWidth="643.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </content>
+                        </Tab>
+                        <Tab text="DeleteWord">
+                            <content>
+                                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="720.0">
+                                    <children>
+                                        <VBox prefHeight="270.0" prefWidth="720.0">
+                                            <children>
+                                                <AnchorPane prefHeight="452.0" prefWidth="720.0">
+                                                    <children>
+                                                        <Label layoutX="60.0" layoutY="20.0" prefHeight="41.0" prefWidth="140.0" text="Dictionary" textAlignment="CENTER" textFill="#2e789e">
+                                                            <font>
+                                                                <Font size="29.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <RadioButton layoutX="53.0" layoutY="77.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="86.0" text="Anh - Việt" />
+                                                        <RadioButton layoutX="157.0" layoutY="77.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="84.0" text="Việt - Anh" />
+                                                        <Label layoutX="407.0" layoutY="20.0" prefHeight="41.0" prefWidth="140.0" text="Spelling" textAlignment="CENTER" textFill="#2e789e">
+                                                            <font>
+                                                                <Font size="29.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <TextField layoutX="407.0" layoutY="73.0" />
+                                                        <Button layoutX="567.0" layoutY="73.0" mnemonicParsing="false" text="Delete" />
+                                                        <AnchorPane layoutX="39.0" layoutY="126.0" prefHeight="282.0" prefWidth="642.0">
+                                                            <children>
+                                                                <WebView prefHeight="284.0" prefWidth="642.0" />
+                                                                <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="286.0" prefWidth="643.0" />
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
