@@ -43,7 +43,7 @@
                                                 <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="21.0" layoutY="73.0" prefHeight="187.0" prefWidth="633.0" />
                                              </children>
                                           </AnchorPane>
-                                          <Label layoutX="279.0" layoutY="52.0" prefHeight="28.0" prefWidth="128.0" text="Explant" textAlignment="CENTER" textFill="#2e789e">
+                                          <Label layoutX="279.0" layoutY="52.0" prefHeight="28.0" prefWidth="128.0" text="Explan" textAlignment="CENTER" textFill="#2e789e">
                                              <font>
                                                 <Font size="22.0" />
                                              </font>
@@ -85,7 +85,7 @@
                                                 <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="21.0" layoutY="73.0" prefHeight="187.0" prefWidth="633.0" />
                                              </children>
                                           </AnchorPane>
-                                          <Label layoutX="279.0" layoutY="53.0" prefHeight="28.0" prefWidth="128.0" text="Explant" textAlignment="CENTER" textFill="#2e789e">
+                                          <Label layoutX="279.0" layoutY="53.0" prefHeight="28.0" prefWidth="128.0" text="Explan" textAlignment="CENTER" textFill="#2e789e">
                                              <font>
                                                 <Font size="22.0" />
                                              </font>

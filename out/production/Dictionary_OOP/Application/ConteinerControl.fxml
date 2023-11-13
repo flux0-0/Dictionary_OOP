@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.*?>
@@ -20,10 +21,19 @@
    <children>
       <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="61.0" prefWidth="720.0" style="-fx-background-color: #2a3140;" styleClass="header_logo" stylesheets="@../CSS/container.css">
          <children>
-            <Label layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="146.0" text="UET DIC" textAlignment="CENTER" textFill="#37a6dd">
+            <Label layoutX="14.0" layoutY="12.0" prefHeight="27.0" prefWidth="146.0" text="UET DIC" textAlignment="CENTER">
                <font>
                   <Font name="Arial Bold" size="34.0" />
                </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REPEAT" endX="1.0">
+                     <stops>
+                        <Stop color="#e4385a" />
+                        <Stop color="#3883e0" offset="0.990599202117154" />
+                        <Stop color="#e4375a" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
             </Label>
          </children>
       </AnchorPane>

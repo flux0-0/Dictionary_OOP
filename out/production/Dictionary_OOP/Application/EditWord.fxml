@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="480" prefWidth="720.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.EditWordControler">
+   <children>
+      <AnchorPane layoutY="130.0" prefHeight="370.0" prefWidth="360.0">
+         <children>
+            <Label layoutX="15.0" layoutY="23.0" prefHeight="27.0" prefWidth="67.0" text="Spelling" textFill="#299cbc">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField layoutX="95.0" layoutY="25.0" prefHeight="25.0" prefWidth="140.0" />
+            <TextArea layoutX="95.0" layoutY="85.0" prefHeight="276.0" prefWidth="220.0" />
+            <Label layoutX="15.0" layoutY="85.0" prefHeight="27.0" prefWidth="67.0" text="Explant" textFill="#3094ab">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="360.0" layoutY="130.0" prefHeight="370.0" prefWidth="360.0">
+         <children>
+            <Label layoutX="15.0" layoutY="23.0" prefHeight="27.0" prefWidth="67.0" text="Spelling" textFill="#39a2c3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField layoutX="95.0" layoutY="25.0" prefHeight="25.0" prefWidth="140.0" />
+            <TextArea layoutX="95.0" layoutY="85.0" prefHeight="276.0" prefWidth="251.0" />
+            <Label layoutX="15.0" layoutY="85.0" prefHeight="27.0" prefWidth="67.0" text="Explant" textFill="#2997c3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="138.0" layoutY="90.0" prefHeight="17.0" prefWidth="107.0" text="Before" textFill="#39a2c3">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="90.0" prefHeight="17.0" prefWidth="107.0" text="After" textFill="#39a2c3">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="-1.0" prefHeight="76.0" prefWidth="720.0" style="-fx-background-color: #2a3140;">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" prefHeight="41.0" prefWidth="239.0" text="Edit Word">
+               <font>
+                  <Font size="39.0" />
+               </font>
+               <textFill>
+                  <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#da3183" />
+                        <Stop color="#42b4d7" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
