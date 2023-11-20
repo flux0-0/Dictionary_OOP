@@ -16,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.util.Callback;
@@ -216,29 +217,34 @@ public class SearchController implements Initializable {
         String selectedWord = listView.getSelectionModel().getSelectedItem();
 
         if (selectedWord != null) {
-            TextArea textArea = new TextArea(data.get(selectedWord).getDef());
-            textArea.setWrapText(true);
+            WebView webView = new WebView();
+            WebEngine webEngine = webView.getEngine();
 
+            // Load the current definition into WebView
+            String currentDefinition = data.get(selectedWord).getDef();
+            String editableContent = "<html><body contenteditable='true'>" + currentDefinition + "</body></html>";
+            webEngine.loadContent(editableContent, "text/html");
+
+            // Create an editable dialog
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Chỉnh sửa định nghĩa");
             alert.setHeaderText(null);
-            alert.getDialogPane().setContent(textArea);
+            alert.getDialogPane().setContent(webView);
 
             ButtonType buttonTypeOk = new ButtonType("OK", ButtonBar.ButtonData.OK_DONE);
             alert.getButtonTypes().setAll(buttonTypeOk, ButtonType.CANCEL);
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == buttonTypeOk) {
-                String newDefinition = textArea.getText();
+                // Get the edited definition from WebView
+                String newDefinition = (String) webEngine.executeScript("document.body.innerHTML");
                 data.get(selectedWord).setDef(newDefinition);
                 this.definitionView.getEngine().loadContent(newDefinition, "text/html");
                 saveEditsToFile("src/main/data/editedE_V.txt", "EDIT", selectedWord, newDefinition);
                 listView.getItems().set(listView.getSelectionModel().getSelectedIndex(), selectedWord);
-
             }
         }
     }
-
     @FXML
     private void handleBookmarkCheckBox() {
         Word selectedWord = getSelectedWord();
