@@ -58,21 +58,13 @@ public class SettingController {
 
     @FXML
     public void handleQuitButton() {
-        // Load Main.fxml
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
             Parent root = loader.load();
-
-            // Tạo một Scene mới với nội dung của Main.fxml
             Scene scene = new Scene(root);
-
-            // Lấy Stage hiện tại
             Stage currentStage = (Stage) quitButton.getScene().getWindow();
-
-            // Đặt Scene mới cho Stage
             currentStage.setScene(scene);
-
-            // Hiển thị lại Stage
+            currentStage.setTitle("Dictionary");
             currentStage.show();
         } catch (Exception e) {
             e.printStackTrace();

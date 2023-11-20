@@ -12,17 +12,6 @@ import javafx.stage.Stage;
 import java.util.*;
 
 public class Dictionary extends Application {
-
-    private static final String DATA_FILE_PATH = "src/main/data/E_V.txt";
-    //private static final String FXML_FILE_PATH = "./src/main/resources/com/example/dictionary/dictionary-view.fxml";
-    private static final String SPLITTING_CHARACTERS = "<html>";
-    private Map<String, Word> data = new HashMap<>();
-
-    @FXML
-    private ListView<String> listView;
-    @FXML
-    private WebView definitionView;
-
     public static void main(String[] args) {
         Application.launch(args);
     }
@@ -41,12 +30,21 @@ public class Dictionary extends Application {
 class Word {
     private String word;
     private String def;
+    private boolean isBookmarked;
 
     public Word(String word, String def) {
         this.word = word;
         this.def = def;
+        this.isBookmarked = false;
     }
 
+    public boolean isBookmarked() {
+        return isBookmarked;
+    }
+
+    public void setBookmarked(boolean bookmarked) {
+        isBookmarked = bookmarked;
+    }
     public String getWord() {
         return word;
     }
@@ -61,5 +59,9 @@ class Word {
 
     public void setDef(String def) {
         this.def = def;
+    }
+
+    public boolean isBookmark() {
+        return isBookmarked;
     }
 }

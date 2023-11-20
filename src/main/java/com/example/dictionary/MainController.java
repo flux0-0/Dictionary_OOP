@@ -8,7 +8,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,21 +25,18 @@ public class MainController {
     @FXML
     private AnchorPane searchPane;
     @FXML
-    private AnchorPane showAllPane;
-    @FXML
     private AnchorPane gamePane;
     @FXML
-    private AnchorPane historyPane;
+    private AnchorPane bookmarkPane;
     @FXML
     private AnchorPane settingPane;
     @FXML
     private AnchorPane translatePane;
 
-
     @FXML
     private SearchController searchController;
     @FXML
-    private HistoryController historyController;
+    private BookmarkController bookmarkController;
     @FXML
     private SettingController settingController;
 
@@ -47,7 +47,7 @@ public class MainController {
     @FXML
     private Button gameButton;
     @FXML
-    private Button mainHistoryButton;
+    private Button bookmarkButton;
     @FXML
     private Button settingButton;
 
@@ -57,21 +57,16 @@ public class MainController {
     @FXML
     private void showSearchPane(ActionEvent event) {
         try {
-            // Load FXML file của Search Scene
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Search.fxml"));
             Parent searchRoot = loader.load();
 
-            // Tạo scene mới với root là searchRoot
             Scene searchScene = new Scene(searchRoot);
 
-            // Lấy stage từ nút được nhấn
             Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-            // Thiết lập scene mới cho stage
             primaryStage.setScene(searchScene);
             primaryStage.setTitle("Search");
 
-            // Hiển thị scene mới
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -80,21 +75,16 @@ public class MainController {
     @FXML
     private void showSettingPane(ActionEvent event) {
         try {
-            // Load FXML file của Search Scene
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Setting.fxml"));
             Parent settingRoot = loader.load();
 
-            // Tạo scene mới với root là searchRoot
             Scene settingScene = new Scene(settingRoot);
 
-            // Lấy stage từ nút được nhấn
             Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-            // Thiết lập scene mới cho stage
             primaryStage.setScene(settingScene);
             primaryStage.setTitle("Setting");
 
-            // Hiển thị scene mới
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -102,14 +92,26 @@ public class MainController {
     }
     @FXML
     public void showTranslatePane() {
-        translateButton.getStyleClass().add("active");
         setMainContent(translatePane);
     }
 
     @FXML
-    public void showSettingPane() {
-        settingButton.getStyleClass().add("active");
-        setMainContent(settingPane);
+    public void showBookmarkPane(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Bookmark.fxml"));
+            Parent searchRoot = loader.load();
+
+            Scene searchScene = new Scene(searchRoot);
+
+            Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            primaryStage.setScene(searchScene);
+            primaryStage.setTitle("Bookmark");
+
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

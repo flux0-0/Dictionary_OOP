@@ -28,36 +28,36 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="58.0" prefHeight="422.0" prefWidth="152.0" style="-fx-background-color: #2a3140;">
+      <AnchorPane layoutY="57.0" prefHeight="423.0" prefWidth="152.0" style="-fx-background-color: #2a3140;">
          <children>
-            <Button fx:id="searchButton" layoutX="6.0" layoutY="13.0" mnemonicParsing="false" onAction="#showSearchPane" prefHeight="54.0" prefWidth="79.0" text="Search" textFill="#0a0a0a" />
-            <Button layoutX="6.0" layoutY="75.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="79.0" text="History" textOverrun="CLIP" />
-            <Button layoutX="6.0" layoutY="138.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="79.0" text="Game" />
-            <Text fill="WHITE" layoutX="86.0" layoutY="46.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" wrappingWidth="65.13671875">
+            <Button fx:id="searchButton" layoutX="6.0" layoutY="13.0" mnemonicParsing="false" onAction="#showSearchPane" prefHeight="54.0" prefWidth="79.0" styleClass="search-button" stylesheets="@../../../StyleCSS/Main.css" textFill="#0a0a0a" />
+            <Button fx:id="bookmarkButton" layoutX="6.0" layoutY="75.0" mnemonicParsing="false" onAction="#showBookmarkPane" prefHeight="54.0" prefWidth="79.0" styleClass="bookmark-button" stylesheets="@../../../StyleCSS/Main.css" textOverrun="CLIP" />
+            <Button layoutX="6.0" layoutY="138.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="79.0" styleClass="game-button" stylesheets="@../../../StyleCSS/Main.css" />
+            <Text fill="WHITE" layoutX="86.0" layoutY="46.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" textAlignment="CENTER" wrappingWidth="65.13671875">
                <font>
-                  <Font size="15.0" />
+                  <Font size="13.0" />
                </font>
             </Text>
-            <Text fill="#eeeeee" layoutX="86.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game" wrappingWidth="65.13671875">
+            <Text fill="#eeeeee" layoutX="86.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game" textAlignment="CENTER" wrappingWidth="65.13671875">
                <font>
-                  <Font size="15.0" />
+                  <Font size="13.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="86.0" layoutY="108.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="History" wrappingWidth="65.13671875">
+            <Text fill="WHITE" layoutX="86.0" layoutY="108.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Bookmark" wrappingWidth="65.13671875">
                <font>
-                  <Font size="15.0" />
+                  <Font size="13.0" />
                </font>
             </Text>
-            <Button fx:id="settingButton" layoutX="6.0" layoutY="361.0" mnemonicParsing="false" onAction="#showSettingPane" prefHeight="54.0" prefWidth="79.0" text="Setting" />
-            <Text fill="#eeeeee" layoutX="86.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting" wrappingWidth="65.13671875">
+            <Button fx:id="settingButton" layoutX="6.0" layoutY="361.0" mnemonicParsing="false" onAction="#showSettingPane" prefHeight="54.0" prefWidth="79.0" styleClass="setting-button" stylesheets="@../../../StyleCSS/Main.css" />
+            <Text fill="#eeeeee" layoutX="86.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting" textAlignment="CENTER" wrappingWidth="65.13671875">
                <font>
-                  <Font size="15.0" />
+                  <Font size="13.0" />
                </font>
             </Text>
-            <Button fx:id="translateButton" layoutX="6.0" layoutY="202.0" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="54.0" prefWidth="79.0" text="Translate" />
-            <Text fill="WHITE" layoutX="86.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Translate" wrappingWidth="65.13671875">
+            <Button fx:id="translateButton" layoutX="6.0" layoutY="202.0" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="54.0" prefWidth="79.0" styleClass="translate-button" stylesheets="@../../../StyleCSS/Main.css" />
+            <Text fill="WHITE" layoutX="86.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Translate" textAlignment="CENTER" wrappingWidth="65.13671875">
                <font>
-                  <Font size="15.0" />
+                  <Font size="13.0" />
                </font>
             </Text>
          </children></AnchorPane>
