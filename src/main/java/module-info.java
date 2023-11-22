@@ -4,6 +4,8 @@ module com.example.dictionary {
 
     requires com.dlsc.formsfx;
     requires javafx.web;
+    requires voicerss.tts;
+    requires java.desktop;
 
     opens com.example.dictionary to javafx.fxml;
     exports com.example.dictionary;

@@ -1,5 +1,6 @@
 package com.example.dictionary;
 
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -16,10 +17,13 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import javafx.util.Pair;
 
 import java.io.*;
 import java.net.URL;
@@ -38,6 +42,9 @@ public class SearchController implements Initializable {
     private Map<String, Word> data = new HashMap<>();
     private Set<String> bookmarkedWords = new HashSet<>();
 
+
+    @FXML
+    private AnchorPane mainSearchPane;
     @FXML
     private ListView<String> listView;
     @FXML
@@ -49,10 +56,16 @@ public class SearchController implements Initializable {
     @FXML
     private Button deleteButton;
     @FXML
+    private Button addButton;
+    @FXML
     private CheckBox bookmarkCheckBox;
     @FXML
     private TextField searchBar;
 
+    private void updateListView() {
+        List<String> words = new ArrayList<>(data.keySet());
+        listView.setItems(FXCollections.observableArrayList(words));
+    }
     private void addWordToBookmark(Word word) {
         bookmarkedWords.add(word.getWord());
         updateCheckBoxState();
@@ -96,37 +109,40 @@ public class SearchController implements Initializable {
                     writer.write("DELETE:" + word);
                     break;
                 case "EDIT":
-                    // Ghi thông tin về thao tác chỉnh sửa vào tệp
                     writer.write("EDIT:" + word + SPLITTING_CHARACTERS + definition);
                     break;
-                // Các loại thao tác khác có thể được xử lý ở đây
+                case "ADD":
+                    writer.write("ADD:" + word + SPLITTING_CHARACTERS + definition);
+                    break;
             }
             writer.newLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private void applyEditsFromFile(String editsFilePath) throws IOException {
-        FileReader editsFileReader = new FileReader(editsFilePath);
-        BufferedReader editsBufferedReader = new BufferedReader(editsFileReader);
 
-        String editLine;
-        while ((editLine = editsBufferedReader.readLine()) != null) {
-            String[] editParts = editLine.split(":");
-            String editType = editParts[0].trim();
-            switch (editType) {
-                case "DELETE":
-                    String deletedWord = editParts[1].trim();
-                    data.remove(deletedWord);
-                    break;
-                case "EDIT":
-                    String editedDefinition = editParts[1].trim();
-                    String editedWord = editedDefinition.split(SPLITTING_CHARACTERS)[0];
-                    data.put(editedWord, new Word(editedWord, editedDefinition));
-                    break;
+    private void applyEditsFromFile(String editsFilePath) {
+        try (BufferedReader editsBufferedReader = new BufferedReader(new FileReader(editsFilePath))) {
+            String editLine;
+            while ((editLine = editsBufferedReader.readLine()) != null) {
+                String[] editParts = editLine.split(":");
+                String editType = editParts[0].trim();
+                switch (editType) {
+                    case "DELETE":
+                        String deletedWord = editParts[1].trim();
+                        data.remove(deletedWord);
+                        break;
+                    case "EDIT":
+                    case "ADD":
+                        String editedDefinition = editParts[1].trim();
+                        String editedWord = editedDefinition.split(SPLITTING_CHARACTERS)[0];
+                        data.put(editedWord, new Word(editedWord, editedDefinition));
+                        break;
+                }
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        editsBufferedReader.close();
     }
 
     public void initComponents() {
@@ -178,13 +194,16 @@ public class SearchController implements Initializable {
     public void handleSearchBar(KeyEvent event) {
         String keyword = searchBar.getText().toLowerCase();
 
-        Predicate<String> filterCondition = word -> word.toLowerCase().contains(keyword);
+        Predicate<String> filterCondition = word -> word.toLowerCase().startsWith(keyword);
 
-        FilteredList<String> filteredList = new FilteredList<>(FXCollections.observableArrayList(data.keySet()), filterCondition);
+        List<String> filteredWords = data.keySet().stream()
+                .filter(filterCondition)
+                .sorted(Comparator.comparing(String::length)) // Sắp xếp theo độ dài từ ngắn đến dài
+                .collect(Collectors.toList());
 
-        listView.setItems(filteredList);
+        listView.setItems(FXCollections.observableArrayList(filteredWords));
 
-        if (!filteredList.isEmpty()) {
+        if (!filteredWords.isEmpty()) {
             listView.getSelectionModel().select(0);
             Word selectedWord = data.get(listView.getSelectionModel().getSelectedItem().trim());
             String definition = selectedWord.getDef();
@@ -213,6 +232,74 @@ public class SearchController implements Initializable {
     }
 
     @FXML
+    public void handleAddButton(ActionEvent event) {
+        // Create a dialog for adding a new word
+        Dialog<Pair<String, String>> dialog = new Dialog<>();
+        dialog.setTitle("Thêm từ mới");
+        dialog.setHeaderText(null);
+
+        // Set the button types
+        ButtonType addButton = new ButtonType("Thêm", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(addButton, ButtonType.CANCEL);
+
+        // Create the text fields and set them in the dialog
+        TextField wordField = new TextField();
+        wordField.setPromptText("Nhập từ khóa");
+
+        // Use TextArea for definition input
+        TextArea definitionField = new TextArea();
+        definitionField.setPromptText("Nhập định nghĩa");
+        definitionField.setWrapText(true); // Enable text wrapping
+        definitionField.setPrefRowCount(5); // Set the preferred row count
+
+        // Create a VBox to hold the components
+        VBox vbox = new VBox();
+        vbox.getChildren().addAll(
+                new Label("Nhập từ khóa:"),
+                wordField,
+                new Label("Nhập định nghĩa:"),
+                definitionField
+        );
+
+        // Set the preferred size of the VBox
+        vbox.setSpacing(10); // Set spacing between components
+        vbox.setMinSize(300, 150);
+        vbox.setPrefSize(400, 200);
+
+        dialog.getDialogPane().setContent(vbox);
+
+        // Set the preferred size of the DialogPane
+        dialog.getDialogPane().setMinSize(400, 200);
+        dialog.getDialogPane().setPrefSize(500, 250);
+
+        // Request focus on the word field by default
+        Platform.runLater(() -> wordField.requestFocus());
+
+        // Convert the result to a pair when the button is clicked
+        dialog.setResultConverter(dialogButton -> {
+            if (dialogButton == addButton) {
+                return new Pair<>(wordField.getText(), definitionField.getText());
+            }
+            return null;
+        });
+
+        Optional<Pair<String, String>> result = dialog.showAndWait();
+
+        result.ifPresent(pair -> {
+            String word = pair.getKey();
+            String definition = pair.getValue();
+
+            // Add the new word to the data map
+            data.put(word, new Word(word, definition));
+
+            // Save the new word to editedE_V.txt
+            saveEditsToFile("src/main/data/editedE_V.txt", "ADD", word, definition);
+
+            // Refresh the list view
+            listView.getItems().add(word);
+        });
+    }
+    @FXML
     public void handleEditButton(ActionEvent event) {
         String selectedWord = listView.getSelectionModel().getSelectedItem();
 
@@ -236,7 +323,6 @@ public class SearchController implements Initializable {
 
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == buttonTypeOk) {
-                // Get the edited definition from WebView
                 String newDefinition = (String) webEngine.executeScript("document.body.innerHTML");
                 data.get(selectedWord).setDef(newDefinition);
                 this.definitionView.getEngine().loadContent(newDefinition, "text/html");
@@ -258,6 +344,7 @@ public class SearchController implements Initializable {
             }
         }
     }
+
     @FXML
     private void handleListViewClick() {
         updateCheckBoxState();
@@ -275,6 +362,19 @@ public class SearchController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+
+        // Thêm lắng nghe sự kiện khi mục được chọn
+        listView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Kiểm tra nếu có mục được chọn
+            if (newValue != null) {
+                // Đổi màu chữ của mục được chọn sang màu tím
+                int selectedIndex = listView.getSelectionModel().getSelectedIndex();
+                listView.getFocusModel().focus(selectedIndex);
+                listView.getFocusModel().focus(selectedIndex);
+                listView.lookup(".list-cell").setStyle("-fx-text-fill: #8e24aa;");
+            }
+        });
         loadWordList();
         initComponents();
         updateCheckBoxState();

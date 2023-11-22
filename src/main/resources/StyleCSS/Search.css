@@ -4,16 +4,80 @@
     -fx-background-size: contain;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+    -fx-background-radius: 50%;
+    -fx-padding: 10;
 }
 .delete-button {
     -fx-graphic: url('../Image/remove.png');
     -fx-background-size: contain;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+    -fx-background-radius: 50%;
+    -fx-padding: 10;
 }
 .backward-button {
-    -fx-graphic: url('../Image/backward.png');
+    -fx-graphic: url('../Image/home.png');
+    -fx-background-size: 50 30;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-preserve-ratio: true;
+    -fx-background-insets: 0;
+
+    -fx-effect: dropshadow(gaussian, rgba(75,0,130,0.75), 10, 0, 0, 0);
+}
+
+.add-button {
+    -fx-graphic: url('../Image/add.png');
     -fx-background-size: contain;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+    -fx-background-radius: 50%;
+    -fx-padding: 10;
+}
+/*ListView*/
+.list-view {
+    -fx-background-radius: 10; /* Điều chỉnh độ cong của viền */
+    -fx-border-radius: 10; /* Điều chỉnh độ cong của biên */
+    -fx-padding: 10; /* Điều chỉnh độ dày của viền */
+    -fx-border-color: #8e24aa; /* Màu của biên */
+    -fx-border-width: 2; /* Độ rộng của biên */
+}
+.list-view:hover {
+    -fx-background-color: #add8e6;
+}
+
+.list-cell {
+    -fx-background-color: #87CEEB;
+}
+
+.list-cell:hover {
+    -fx-background-color: #add8e6;
+}
+.list-view .scroll-bar {
+    -fx-background-radius: 5; /* Điều chỉnh độ cong của viền của ScrollBar */
+}
+/*TextField*/
+.text-field {
+    -fx-background-radius: 10; /* Điều chỉnh độ cong của viền */
+    -fx-border-radius: 10; /* Điều chỉnh độ cong của biên */
+    -fx-padding: 10; /* Điều chỉnh độ dày của viền */
+    -fx-border-color: #8e24aa; /* Màu của biên */
+    -fx-border-width: 2; /* Độ rộng của biên */
+}
+
+#mainSearchPane {
+    -fx-background-color: #008080; /* Màu xanh đậm */
+}
+.list-cell:filled:selected {
+    -fx-background-color: #8e24aa; /* Màu nền khi được chọn */
+    -fx-text-fill: #ffffff; /* Màu chữ khi được chọn */
+}
+/*WebView*/
+.web-view {
+    -fx-background-color: #fffacd; /* Màu vàng nhạt */
+    -fx-background-radius: 10; /* Điều chỉnh độ cong của cạnh */
+    -fx-border-color: #8a2be2; /* Màu tím */
+    -fx-border-width: 2; /* Độ rộng của đường viền */
 }

@@ -39,6 +39,8 @@ public class MainController {
     private BookmarkController bookmarkController;
     @FXML
     private SettingController settingController;
+    @FXML
+    private TranslateController translateController;
 
     @FXML
     private Button searchButton;
@@ -91,8 +93,22 @@ public class MainController {
         }
     }
     @FXML
-    public void showTranslatePane() {
-        setMainContent(translatePane);
+    public void showTranslatePane(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Translate.fxml"));
+            Parent settingRoot = loader.load();
+
+            Scene settingScene = new Scene(settingRoot);
+
+            Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            primaryStage.setScene(settingScene);
+            primaryStage.setTitle("Translate");
+
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

@@ -1,17 +1,16 @@
--th
--trichous
--tron
--trophin
-1-byte character
-1-byte character set
-2D configuration
-A A
 checkpoint
-checks
-football
-football-player
-footballer
-gorgeous
-gorgeously
-gorgeousness
+-trophin
+-th
+A A
 rugby football
+gorgeousness
+1-byte character set
+-trichous
+footballer
+checks
+gorgeous
+1-byte character
+2D configuration
+-tron
+football-player
+gorgeously

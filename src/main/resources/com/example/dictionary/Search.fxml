@@ -6,26 +6,65 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.SearchController">
+<AnchorPane fx:id="mainSearchPane" prefHeight="480.0" prefWidth="720.0" styleClass="web-view" stylesheets="@../../../StyleCSS/Search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.SearchController">
    <children>
       <AnchorPane layoutX="2.0" prefHeight="79.0" prefWidth="203.0">
          <children>
-            <TextField fx:id="searchBar" layoutX="6.0" layoutY="40.0" onKeyReleased="#handleSearchBar" prefHeight="47.0" prefWidth="190.0" />
-            <Button fx:id="backwardButton" layoutX="6.0" layoutY="5.0" mnemonicParsing="false" onAction="#handleBackwardButton" prefHeight="25.0" prefWidth="50.0" styleClass="backward-button" stylesheets="@../../../StyleCSS/Search.css" />
+            <TextField fx:id="searchBar" layoutX="6.0" layoutY="54.0" onKeyReleased="#handleSearchBar" prefHeight="27.0" prefWidth="190.0" />
+            <Button fx:id="backwardButton" layoutX="6.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleBackwardButton" prefHeight="34.0" prefWidth="50.0" styleClass="backward-button" stylesheets="@../../../StyleCSS/Search.css" />
          </children>
       </AnchorPane>
-      <ListView fx:id="listView" layoutX="9.0" layoutY="90.0" onMouseClicked="#handleListViewClick" prefHeight="378.0" prefWidth="190.0" />
+      <ListView fx:id="listView" layoutX="8.0" layoutY="95.0" onMouseClicked="#handleListViewClick" prefHeight="378.0" prefWidth="190.0" stylesheets="@../../../StyleCSS/Search.css" />
       <Label layoutX="211.0" layoutY="39.0" prefHeight="19.0" prefWidth="162.0" text="Nghĩa của từ">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="0.973484891833681" endY="0.8939393957455953" startX="0.9734848480332982">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5130084753036499" green="0.04428849741816521" blue="0.7473683953285217" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Button fx:id="editButton" layoutX="604.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="50.0" prefWidth="50.0" styleClass="edit-button" stylesheets="@../../../StyleCSS/Search.css" />
-      <Button fx:id="deleteButton" layoutX="654.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="50.0" prefWidth="50.0" styleClass="delete-button" stylesheets="@../../../StyleCSS/Search.css" />
-      <WebView fx:id="definitionView" layoutX="209.0" layoutY="90.0" prefHeight="378.0" prefWidth="501.0" />
-      <CheckBox fx:id="bookmarkCheckBox" layoutX="521.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBookmarkCheckBox" prefHeight="50.0" prefWidth="83.0" text="Bookmark" />
+      <Button fx:id="editButton" layoutX="594.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="50.0" prefWidth="50.0" styleClass="edit-button" stylesheets="@../../../StyleCSS/Search.css" />
+      <Button fx:id="deleteButton" layoutX="655.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="50.0" prefWidth="50.0" styleClass="delete-button" stylesheets="@../../../StyleCSS/Search.css" />
+      <WebView fx:id="definitionView" layoutX="205.0" layoutY="95.0" prefHeight="378.0" prefWidth="501.0" stylesheets="@../../../StyleCSS/Search.css" />
+      <CheckBox fx:id="bookmarkCheckBox" layoutX="425.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBookmarkCheckBox" prefHeight="50.0" prefWidth="97.0" styleClass="checkbox" stylesheets="@../../../StyleCSS/Search.css" text="Bookmark">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.9507576046567975" endY="0.04924241882382019" startX="0.9734848480332982">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.678518533706665" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></CheckBox>
+      <Button layoutX="532.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="50.0" prefWidth="52.0" styleClass="add-button" stylesheets="@../../../StyleCSS/Search.css" />
    </children>
 </AnchorPane>
