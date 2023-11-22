@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -32,16 +33,25 @@ public class BookmarkController implements Initializable {
     private Button deleteButton;
     @FXML
     private Button backwardButton;
+    @FXML
+    private AnchorPane mainBookmarkPane;
     private Map<String, Word> data = new HashMap<>();
     private List<String> bookmarkedWords = new ArrayList<>();
     private String[] option = {"Recently added", "A-Z"};
 
     private void handleFilterChange(String selectedFilter) {
+        List<String> sortedList = new ArrayList<>(bookmarkedWords);
+
         if ("Recently added".equals(selectedFilter)) {
-            Collections.reverse(bookmarkedWords);
+            Collections.reverse(sortedList);
         } else if ("A-Z".equals(selectedFilter)) {
-            Collections.sort(bookmarkedWords);
+            Collections.sort(sortedList);
         }
+
+        bookmarkListView.getItems().setAll(sortedList);
+    }
+
+    private void updateBookmarkListView() {
         bookmarkListView.getItems().setAll(bookmarkedWords);
     }
     private void displayWordDefinition(String selectedWord) {

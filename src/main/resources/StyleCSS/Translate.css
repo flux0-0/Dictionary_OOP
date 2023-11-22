@@ -3,10 +3,15 @@
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
     -fx-background-size: 20px;
-    -fx-background-color: #e6e6e6;
     -fx-background-radius: 5; /* Điều chỉnh độ cong của nút */
     -fx-pref-width: 35;
     -fx-pref-height: 35;
+    -fx-alignment: bottom_center;
+    -fx-background-color: #ADD8E6; /* Màu nền mặc định */
+}
+
+.button-speak:hover {
+    -fx-background-color: #FFEA00; /* Màu nền khi chỏ vào */
 }
 
 .button-translate-submit {
@@ -31,9 +36,83 @@
     -fx-background-size: 30px;
     -fx-background-color: #ADD8E6;
     -fx-background-radius: 5; /* Điều chỉnh độ cong của nút */
+    -fx-alignment: center;
     -fx-pref-width: 50;
     -fx-pref-height: 35;
 }
 .button-home:hover {
     -fx-background-color: #FFEA00; /* Màu vàng nhạt khi hover */
+}
+/*select-language-button*/
+.select-language-button {
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-background-color: #fff;
+    -fx-padding: 10 20;
+    -fx-border-color: #7FFFD4; /* Màu viền */
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+}
+.select-language-button:hover {
+    -fx-background-color: #f0f0f0; /* Màu nền khi trỏ vào */
+}
+.select-language-button:pressed {
+    -fx-background-color: #ffe082; /* Màu nền khi được chọn */
+}
+
+#translateMainPane {
+    -fx-background-color: #009688;
+    -fx-min-width: 720; /* Đặt chiều rộng tối thiểu */
+    -fx-min-height: 620; /* Đặt chiều cao tối thiểu */
+}
+/*textField*/
+.text-field-style {
+    -fx-background-color: #fff; /* Màu nền mặc định */
+    -fx-background-radius: 5; /* Điều chỉnh độ cong của góc */
+    -fx-border-width: 2; /* Độ dày của viền */
+    -fx-border-radius: 5;
+}
+.text-field-style:hover {
+    -fx-background-color: #f0f0f0; /* Màu nền khi trỏ vào */
+}
+/*hbox*/
+.hbox-with-spacing {
+    -fx-spacing: 5; /* Khoảng cách giữa các nút */
+}
+/*convert*/
+.button-convert {
+    -fx-background-image: url('../Image/convert.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 25px 25px;
+    -fx-background-radius: 5;
+    -fx-pref-width: 35;
+    -fx-pref-height: 35;
+}
+/*text-area*/
+.textarea-styled {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14;
+    -fx-background-color: #fff; /* Màu nền mặc định */
+    -fx-background-radius: 5; /* Điều chỉnh độ cong của góc */
+    -fx-border-color: #7FFFD4;
+    -fx-border-width: 2; /* Độ dày của viền */
+    -fx-border-radius: 5;
+}
+/*vbox*/
+.vbox-with-spacing {
+    -fx-spacing: 5; /* Khoảng cách giữa các nút */
+}
+/*button-translate*/
+.button-translate {
+    -fx-background-image: url('../Image/translate30.png'); /* Ảnh nền */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: 30px 30px; /* Định dạng nút */
+    -fx-border-width: 0; /* Loại bỏ viền */
+}
+/*hbox-for-home-button*/
+.hbox-custom {
+    -fx-min-width: 35;
+    -fx-min-height: 50;
 }

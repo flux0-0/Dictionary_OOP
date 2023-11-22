@@ -8,14 +8,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane prefHeight="480.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.BookmarkController">
+<AnchorPane fx:id="mainBookmarkPane" prefHeight="480.0" prefWidth="720.0" stylesheets="@../../../StyleCSS/Search.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.BookmarkController">
    <children>
-      <Button fx:id="backwardButton" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleBackwardButton" prefHeight="34.0" prefWidth="50.0" styleClass="backward-button" stylesheets="@../../../StyleCSS/Bookmark.css" />
-      <ListView fx:id="bookmarkListView" layoutX="14.0" layoutY="78.0" prefHeight="386.0" prefWidth="184.0" />
-      <WebView fx:id="bookmarkDefinitionView" layoutX="204.0" layoutY="78.0" prefHeight="386.0" prefWidth="502.0" />
-      <ChoiceBox fx:id="filter" layoutX="14.0" layoutY="42.0" prefHeight="34.0" prefWidth="106.0" />
-      <Button fx:id="deleteButton" layoutX="655.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="50.0" prefWidth="50.0" styleClass="delete-button" stylesheets="@../../../StyleCSS/Bookmark.css" />
-      <Label layoutX="204.0" layoutY="35.0" text="Nghĩa của từ">
+      <Button fx:id="backwardButton" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBackwardButton" prefHeight="34.0" prefWidth="50.0" styleClass="button-home" stylesheets="@../../../StyleCSS/Search.css" />
+      <ListView fx:id="bookmarkListView" layoutX="14.0" layoutY="93.0" prefHeight="372.0" prefWidth="184.0" stylesheets="@../../../StyleCSS/Search.css" />
+      <WebView fx:id="bookmarkDefinitionView" layoutX="204.0" layoutY="92.0" prefHeight="372.0" prefWidth="502.0" styleClass="web-view" stylesheets="@../../../StyleCSS/Search.css" />
+      <ChoiceBox fx:id="filter" layoutX="14.0" layoutY="51.0" prefHeight="38.0" prefWidth="119.0" stylesheets="@../../../StyleCSS/Search.css" />
+      <Button fx:id="deleteButton" layoutX="655.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="50.0" prefWidth="50.0" styleClass="delete-button" stylesheets="@../../../StyleCSS/Search.css" />
+      <Label layoutX="204.0" layoutY="46.0" text="Nghĩa của từ" textFill="#c5cc9f">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

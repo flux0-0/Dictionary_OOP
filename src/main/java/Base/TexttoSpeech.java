@@ -13,7 +13,7 @@ import java.io.*;
 
 public class TexttoSpeech {
     private static final String API_KEY = "e126dc59d4514f83a4ad8b347ad38fe8"; //API key https://www.voicerss.org/
-    private static final String AUDIO_PATH = "D:\\Java\\Dictionary\\src\\audio.wav"; //Đường dẫn đến file .wav
+    private static final String AUDIO_PATH = "src/main/resources/audio/audio.wav"; //Đường dẫn đến file .wav
 
     //Settings
     public static String language = "vi-vn";

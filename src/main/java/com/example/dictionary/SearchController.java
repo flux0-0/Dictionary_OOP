@@ -56,6 +56,8 @@ public class SearchController implements Initializable {
     @FXML
     private Button deleteButton;
     @FXML
+    private Button audioButton;
+    @FXML
     private Button addButton;
     @FXML
     private CheckBox bookmarkCheckBox;
@@ -364,16 +366,8 @@ public class SearchController implements Initializable {
         }
         listView.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
 
-        // Thêm lắng nghe sự kiện khi mục được chọn
         listView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            // Kiểm tra nếu có mục được chọn
-            if (newValue != null) {
-                // Đổi màu chữ của mục được chọn sang màu tím
-                int selectedIndex = listView.getSelectionModel().getSelectedIndex();
-                listView.getFocusModel().focus(selectedIndex);
-                listView.getFocusModel().focus(selectedIndex);
-                listView.lookup(".list-cell").setStyle("-fx-text-fill: #8e24aa;");
-            }
+            System.out.println("Selected word: " + newValue);
         });
         loadWordList();
         initComponents();
