@@ -52,7 +52,7 @@
                 <TextField fx:id="area2" alignment="TOP_LEFT" prefHeight="205.0" prefWidth="708.0" styleClass="text-field-style" stylesheets="@../../../StyleCSS/Translate.css" />
             </children>
         </VBox>
-      <VBox layoutX="310.0" layoutY="546.0" prefHeight="60.0" prefWidth="100.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="309.6" AnchorPane.rightAnchor="310.0">
+      <VBox layoutX="310.0" layoutY="546.0" prefHeight="60.0" prefWidth="100.0" AnchorPane.bottomAnchor="14.0">
          <children>
             <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="35.0" prefWidth="50.0" styleClass="button-home" stylesheets="@../../../StyleCSS/Translate.css" textAlignment="CENTER">
                <VBox.margin>
