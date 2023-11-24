@@ -16,3 +16,5 @@ DELETE:AND
 EDIT:-mer<html><i>-mer</i><br><ul><li><font color="#cc0000"><b> hậu tố tạo danh từ có nghĩa là polyme (trùng phân) hoặc isome (đồng phân)<br>edit test DQH</b></font></li></ul>
 ADD:hieu<html>dinh quoc
 EDIT:Action lag<html><i>Action lag</i><br><ul><li><font color="#cc0000"><b> (Econ) Độ trễ của hành động.</b></font><ul>+ Mức độ trễ giữa việc quyết định một chính sách (đặc biệt trong kinh tế học vĩ mô) và việc thực hiện chính sách đó.<br>edit test</ul></li></ul>
+ADD:Test edit button<html>test edit button
+EDIT:Test edit button<html>test add button

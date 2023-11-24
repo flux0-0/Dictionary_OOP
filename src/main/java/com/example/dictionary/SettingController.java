@@ -1,17 +1,25 @@
 package com.example.dictionary;
 
+import Base.TexttoSpeech;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import java.util.prefs.Preferences;
 
 import java.io.*;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class SettingController {
+public class SettingController implements Initializable {
 
 
+    @FXML
+    private AnchorPane anchorPane;
     @FXML
     private RadioButton evButton;
     @FXML
@@ -19,7 +27,7 @@ public class SettingController {
     @FXML
     private Button quitButton;
     @FXML
-    private Button doneButton;
+    private Button saveButton;
     @FXML
     private Button undoButton;
     @FXML
@@ -30,30 +38,29 @@ public class SettingController {
     private TextField addTextField;
     @FXML
     private TextField editAndRemoveTextField;
-
     private ToggleGroup toggleGroup;
-
     @FXML
-    public void handleSelectButton() {
-        toggleGroup = new ToggleGroup();
+    private ChoiceBox accentChoiceBox;
+    private String[] option = {"Eng-UK", "Eng-US"};
 
-        // Gắn ToggleGroup cho cả hai RadioButton
-        evButton.setToggleGroup(toggleGroup);
-        veButton.setToggleGroup(toggleGroup);
 
-        // Đặt sự kiện xử lý khi thay đổi lựa chọn
-        toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue == null) {
-                // Không có nút nào được chọn
-                System.out.println("No button selected");
-            } else if (newValue == evButton) {
-                System.out.println("Button 1 selected");
-                // Thêm logic xử lý khi nút 1 được chọn
-            } else if (newValue == veButton) {
-                System.out.println("Button 2 selected");
-                // Thêm logic xử lý khi nút 2 được chọn
-            }
-        });
+    private void restorePreviousState() {
+        // Khôi phục trạng thái trước đó từ Preferences
+        Preferences prefs = Preferences.userNodeForPackage(getClass());
+        String savedOption = prefs.get("selectedOption", null);
+        if (savedOption != null) {
+            accentChoiceBox.setValue(savedOption);
+        }
+    }
+
+    private void handleAccentChoiceBox(String selectedOption) {
+        if ("Eng-UK".equals(selectedOption)) {
+            TexttoSpeech.language = "en-gb";
+            TexttoSpeech.Name = "Alice";
+        } else if ("Eng-US".equals(selectedOption)) {
+            TexttoSpeech.language = "en-us";
+            TexttoSpeech.Name = "Linda";
+        }
     }
 
     @FXML
@@ -71,14 +78,24 @@ public class SettingController {
         }
     }
 
+    @FXML
+    private void handleSaveButton() {
+        // Lưu trạng thái hiện tại vào Preferences
+        Preferences prefs = Preferences.userNodeForPackage(getClass());
+        String selectedOption = (String) accentChoiceBox.getValue();
+        prefs.put("selectedOption", selectedOption);
 
-    // Phương thức để hiển thị hộp thoại cảnh báo
-    private void showAlert(String message) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Warning");
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+        Stage stage = (Stage) anchorPane.getScene().getWindow();
+        stage.close();
     }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        accentChoiceBox.getItems().addAll(option);
 
+        accentChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            handleAccentChoiceBox((String) newValue);
+        });
+
+        restorePreviousState();
+    }
 }

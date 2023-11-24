@@ -14,26 +14,16 @@ import java.io.IOException;
 import java.util.*;
 
 public class Dictionary extends Application {
-    public static void main(String[] args) {
-        Application.launch(args);
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(Dictionary.class.getResource("main.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader();
-            Parent root = fxmlLoader.load(getClass().getResource("Main.fxml").openStream());
-
-            // Load CSS
-            Scene scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("/StyleCSS/Main.css").toExternalForm());
-
-            primaryStage.setScene(scene);
-            primaryStage.setTitle("Dictionary");
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) {
+        launch();
     }
 }
 

@@ -12,6 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -77,22 +78,20 @@ public class MainController {
         }
     }
     @FXML
-    private void showSettingPane(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("Setting.fxml"));
-            Parent settingRoot = loader.load();
+    private void showSettingPane(ActionEvent event) throws IOException {
+        Parent settingsRoot = FXMLLoader.load(getClass().getResource("setting.fxml"));
+        Scene settingsScene = new Scene(settingsRoot);
 
-            Scene settingScene = new Scene(settingRoot);
+        // Create a new stage for the settings scene
+        Stage settingsStage = new Stage();
+        settingsStage.setTitle("Settings");
+        settingsStage.setScene(settingsScene);
 
-            Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        // Set the modality to APPLICATION_MODAL to make it a modal window
+        settingsStage.initModality(Modality.APPLICATION_MODAL);
 
-            primaryStage.setScene(settingScene);
-            primaryStage.setTitle("Setting");
-
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        // Show the settings stage
+        settingsStage.showAndWait();
     }
     @FXML
     public void showTranslatePane(ActionEvent event) {

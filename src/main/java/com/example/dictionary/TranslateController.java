@@ -60,15 +60,6 @@ public class TranslateController {
     String languageFrom = "";
 
     @FXML
-    void detect() {
-        languageFrom = "";
-        text1.setText("");
-        nameFrom = "Linda";
-        speakFrom = "en-gb";
-    }
-
-
-    @FXML
     void vie1() {
         text1.setText("vi");
         languageFrom = "vi";
@@ -124,6 +115,12 @@ public class TranslateController {
             text1.setText(text2.getText());
             text2.setText(temp);
         }
+        if (area1 != null && area2 != null) {
+            area1.clear();
+            String contentFromArea2 = area2.getText();
+            area1.appendText(contentFromArea2);
+            area2.clear();
+        }
     }
     @FXML
     void translate() throws IOException {
@@ -131,20 +128,48 @@ public class TranslateController {
             area2.setText(Translator.translate( text1.getText(), text2.getText(), area1.getText()));
         }
     }
-
     @FXML
     void speak1() throws Exception {
-        TexttoSpeech.Name = nameFrom;
-        TexttoSpeech.language = speakFrom;
+        String textContent = text1.getText().trim();
+
+        if (!textContent.isEmpty()) {
+            if ("vi".equals(textContent)) {
+                TexttoSpeech.Name = "Chi";
+                TexttoSpeech.language = "vi-vn";
+            } else if ("en".equals(textContent)) {
+                TexttoSpeech.Name = "Linda";
+                TexttoSpeech.language = "en-gb";
+            } else if ("ko".equals(textContent)) {
+                TexttoSpeech.Name = "Nari";
+                TexttoSpeech.language = "ko-kr";
+            } else {
+                TexttoSpeech.Name = "Linda";
+                TexttoSpeech.language = "en-gb";
+            }
+        }
         if (!Objects.equals(area1.getText(), "")) {
             TexttoSpeech.speakWord(area1.getText());
         }
     }
-
     @FXML
     void speak2() throws Exception {
-        TexttoSpeech.Name = nameFrom;
-        TexttoSpeech.language = speakFrom;
+        String textContent = text2.getText().trim();
+
+        if (!textContent.isEmpty()) {
+            if ("vi".equals(textContent)) {
+                TexttoSpeech.Name = "Chi";
+                TexttoSpeech.language = "vi-vn";
+            } else if ("en".equals(textContent)) {
+                TexttoSpeech.Name = "Linda";
+                TexttoSpeech.language = "en-gb";
+            } else if ("ko".equals(textContent)) {
+                TexttoSpeech.Name = "Nari";
+                TexttoSpeech.language = "ko-kr";
+            } else {
+                TexttoSpeech.Name = "Linda";
+                TexttoSpeech.language = "en-gb";
+            }
+        }
         if (!Objects.equals(area2.getText(), "")) {
             TexttoSpeech.speakWord(area2.getText());
         }

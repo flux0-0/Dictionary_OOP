@@ -38,7 +38,7 @@
                 </HBox>
             </children>
         </HBox>
-        <VBox layoutX="28.0" layoutY="310.0" prefHeight="235.0" prefWidth="708.0" styleClass="vbox-with-spacing" stylesheets="@../../../StyleCSS/Translate.css" AnchorPane.bottomAnchor="74.79999999999995" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.799999999999955">
+        <VBox layoutX="28.0" layoutY="320.0" prefHeight="235.0" prefWidth="708.0" styleClass="vbox-with-spacing" stylesheets="@../../../StyleCSS/Translate.css" AnchorPane.bottomAnchor="64.79999999999995" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.799999999999955">
             <children>
                 <HBox prefHeight="30.0" prefWidth="708.0" styleClass="hbox-with-spacing" stylesheets="@../../../StyleCSS/Translate.css">
                <children>
@@ -47,15 +47,9 @@
                   <Button fx:id="langToFourth" mnemonicParsing="false" onAction="#korea2" prefHeight="42.0" prefWidth="101.0" styleClass="select-language-button" stylesheets="@../../../StyleCSS/Translate.css" text="Tiếng Hàn" />
                   <Button mnemonicParsing="false" onAction="#speak2" prefHeight="40.0" prefWidth="40.0" styleClass="button-speak" stylesheets="@../../../StyleCSS/Translate.css" />
                </children></HBox>
-                <TextField fx:id="area2" alignment="TOP_LEFT" prefHeight="205.0" prefWidth="708.0" styleClass="text-field-style" stylesheets="@../../../StyleCSS/Translate.css" />
+                <TextField fx:id="area2" alignment="TOP_LEFT" prefHeight="205.0" prefWidth="708.0" stylesheets="@../../../StyleCSS/Translate.css" />
             </children>
         </VBox>
-      <HBox layoutX="260.0" layoutY="556.0" prefHeight="50.0" prefWidth="200.0" AnchorPane.bottomAnchor="13.600000000000001">
-         <children>
-            <HBox prefHeight="32.0" prefWidth="75.0" />
-            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="35.0" prefWidth="50.0" styleClass="button-home" stylesheets="@../../../StyleCSS/Translate.css" textAlignment="CENTER" />
-            <HBox prefHeight="50.0" prefWidth="75.0" />
-         </children>
-      </HBox>
+      <Button fx:id="homeButton" layoutX="334.0" layoutY="570.0" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="35.0" prefWidth="50.0" styleClass="button-home" stylesheets="@../../../StyleCSS/Translate.css" textAlignment="CENTER" AnchorPane.bottomAnchor="14.799999999999997" AnchorPane.leftAnchor="334.0" AnchorPane.rightAnchor="335.20000000000005" />
     </children>
 </AnchorPane>

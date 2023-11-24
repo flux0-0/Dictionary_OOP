@@ -50,6 +50,17 @@ public class BookmarkController implements Initializable {
 
         bookmarkListView.getItems().setAll(sortedList);
     }
+    private List<String> applyFilter(List<String> wordList, String selectedFilter) {
+        List<String> sortedList = new ArrayList<>(wordList);
+
+        if ("Recently added".equals(selectedFilter)) {
+            Collections.reverse(sortedList);
+        } else if ("A-Z".equals(selectedFilter)) {
+            Collections.sort(sortedList);
+        }
+
+        return sortedList;
+    }
 
     private void updateBookmarkListView() {
         bookmarkListView.getItems().setAll(bookmarkedWords);
@@ -97,13 +108,17 @@ public class BookmarkController implements Initializable {
 
         Optional<ButtonType> result = alert.showAndWait();
         if (result.isPresent() && result.get() == ButtonType.OK) {
-            // Xóa từ khỏi danh sách và cập nhật BookmarkList.txt
-            deleteWordAndUpdateFile(selectedWord);
+            String currentFilter = filter.getValue();
+            deleteWordAndUpdateFile(selectedWord, currentFilter);
         }
     }
-    private void deleteWordAndUpdateFile(String wordToDelete) {
+    private void deleteWordAndUpdateFile(String wordToDelete, String currentFilter) {
         bookmarkedWords.remove(wordToDelete);
-        bookmarkListView.getItems().setAll(bookmarkedWords);
+
+        // Apply the current filter to the updated list
+        List<String> sortedList = applyFilter(bookmarkedWords, currentFilter);
+
+        bookmarkListView.getItems().setAll(sortedList);
 
         updateBookmarkListFile();
     }

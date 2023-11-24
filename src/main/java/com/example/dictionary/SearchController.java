@@ -351,8 +351,6 @@ public class SearchController implements Initializable {
     @FXML
     public void handleSpeakButton() throws Exception {
         String selectedWord = listView.getSelectionModel().getSelectedItem();
-        TexttoSpeech.Name = "Linda";
-        TexttoSpeech.language = "en-gb";
         TexttoSpeech.speakWord(selectedWord);
     }
     @FXML
