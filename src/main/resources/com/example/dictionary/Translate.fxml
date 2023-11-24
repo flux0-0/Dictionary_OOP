@@ -15,7 +15,6 @@
             <children>
                 <HBox prefHeight="22.0" prefWidth="663.0" styleClass="hbox-with-spacing" stylesheets="@../../../StyleCSS/Translate.css">
                     <children>
-                        <Button fx:id="langFromFirst" mnemonicParsing="false" onAction="#detect" prefHeight="42.0" prefWidth="150.0" styleClass="select-language-button" stylesheets="@../../../StyleCSS/Translate.css" text="Phát hiện ngôn ngữ" />
                         <Button fx:id="langFromsecond" minWidth="44.0" mnemonicParsing="false" onAction="#vie1" prefHeight="42.0" prefWidth="98.0" styleClass="select-language-button" stylesheets="@../../../StyleCSS/Translate.css" text="Tiếng Việt" />
                   <Button fx:id="langFromThird" mnemonicParsing="false" onAction="#en1" prefHeight="30.0" prefWidth="100.0" styleClass="select-language-button" stylesheets="@../../../StyleCSS/Translate.css" text="Tiếng Anh" />
                   <Button fx:id="langFromFourth" mnemonicParsing="false" onAction="#korea1" prefHeight="37.0" prefWidth="100.0" styleClass="select-language-button" stylesheets="@../../../StyleCSS/Translate.css" text="Tiếng Hàn" />
@@ -28,7 +27,7 @@
         <HBox alignment="CENTER" layoutX="28.0" layoutY="258.0" prefHeight="54.0" prefWidth="663.0" AnchorPane.bottomAnchor="310.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.799999999999955" AnchorPane.topAnchor="258.0">
             <children>
                 <TextField fx:id="text1" prefHeight="26.0" prefWidth="150.0" styleClass="text-field-style" stylesheets="@../../../StyleCSS/Translate.css" />
-                <Button alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="button-convert" stylesheets="@../../../StyleCSS/Translate.css" />
+                <Button alignment="CENTER" mnemonicParsing="false" onAction="#swap" prefHeight="25.0" prefWidth="25.0" styleClass="button-convert" stylesheets="@../../../StyleCSS/Translate.css" />
                 <TextField fx:id="text2" prefHeight="26.0" prefWidth="150.0" styleClass="text-field-style" stylesheets="@../../../StyleCSS/Translate.css" />
                 <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="191.0">
                     <children>
