@@ -118,6 +118,19 @@ public class TranslateController {
     }
 
     @FXML
+    void swap() throws IOException {
+        // Kiểm tra xem cả hai ô văn bản có giá trị khác null không
+        if (text1 != null && text2 != null) {
+            // Lưu giữ giá trị của ô văn bản thứ nhất
+            String temp = text1.getText();
+            // Gán giá trị của ô văn bản thứ hai cho ô văn bản thứ nhất
+            text1.setText(text2.getText());
+            // Gán giá trị lưu giữ cho ô văn bản thứ hai
+            text2.setText(temp);
+        }
+    }
+
+    @FXML
     void translate() throws IOException {
         if (!Objects.equals(area1.getText(), "")) {
             area2.setText(Translator.translate( text1.getText(), text2.getText(), area1.getText()));
