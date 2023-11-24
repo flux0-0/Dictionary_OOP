@@ -23,6 +23,8 @@ public class MainController {
     @FXML
     private AnchorPane mainContent;
     @FXML
+    private ImageView coverImage;
+    @FXML
     private AnchorPane searchPane;
     @FXML
     private AnchorPane gamePane;

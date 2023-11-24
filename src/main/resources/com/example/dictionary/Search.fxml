@@ -50,6 +50,6 @@
             </LinearGradient>
          </textFill></CheckBox>
       <Button layoutX="538.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="50.0" prefWidth="52.0" styleClass="add-button" stylesheets="@../../../StyleCSS/Search.css" />
-      <Button fx:id="audioButton" layoutX="327.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" styleClass="audio-button" stylesheets="@../../../StyleCSS/Search.css" />
+      <Button fx:id="audioButton" layoutX="327.0" layoutY="39.0" mnemonicParsing="false" onAction="#handleSpeakButton" prefHeight="25.0" prefWidth="25.0" styleClass="audio-button" stylesheets="@../../../StyleCSS/Search.css" />
    </children>
 </AnchorPane>

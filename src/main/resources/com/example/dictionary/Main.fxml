@@ -12,13 +12,13 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #FAFAFA;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.MainController">
+<AnchorPane fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: #EEEEEE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.MainController">
    <children>
-      <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="70.0" prefWidth="720.0" style="-fx-background-color: #008080;" styleClass="header_logo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="70.0" prefWidth="720.0" style="-fx-background-color: #BBBBBB;" styleClass="header_logo" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox layoutX="79.0" prefHeight="78.0" prefWidth="574.0" AnchorPane.leftAnchor="79.0" AnchorPane.topAnchor="0.0">
+            <HBox layoutX="84.0" prefHeight="78.0" prefWidth="550.0" AnchorPane.leftAnchor="84.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Label prefHeight="39.0" prefWidth="293.0" text="UET DICTIONARY" textAlignment="CENTER">
+                  <Label prefHeight="39.0" prefWidth="300.0" text="OOP DICTIONARY" textAlignment="CENTER">
                      <font>
                         <Font name="Arial Bold" size="34.0" />
                      </font>
@@ -27,75 +27,70 @@
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="0.31578946113586426" green="0.28187134861946106" blue="0.28187134861946106" />
+                                    <Color red="0.35789474844932556" green="0.30354776978492737" blue="0.30354776978492737" />
                                  </color>
                               </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color red="0.95686274766922" green="0.7647058963775635" blue="0.1882352977991104" />
+                                    <Color red="0.6421052813529968" green="0.6088109016418457" blue="0.5089278817176819" />
                                  </color>
                               </Stop>
                            </stops>
                         </RadialGradient>
                      </textFill>
                      <HBox.margin>
-                        <Insets left="124.0" top="20.0" />
+                        <Insets left="125.0" top="20.0" />
                      </HBox.margin>
                   </Label>
                </children>
             </HBox>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="67.0" prefHeight="414.0" prefWidth="150.0" style="-fx-background-color: #008080;" AnchorPane.bottomAnchor="-1.599999999999966" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="67.0">
+      <VBox layoutX="55.0" layoutY="134.0" prefHeight="200.0" prefWidth="235.0" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="134.0">
          <children>
-            <VBox prefHeight="296.0" prefWidth="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <Button fx:id="searchButton" alignment="CENTER" mnemonicParsing="false" onAction="#showSearchPane" prefHeight="54.0" prefWidth="80.0" styleClass="search-button" stylesheets="@../../../StyleCSS/Main.css" textFill="#0a0a0a">
-                     <tooltip>
-                        <Tooltip text="Search" />
-                     </tooltip>
-                     <VBox.margin>
-                        <Insets left="35.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="bookmarkButton" mnemonicParsing="false" onAction="#showBookmarkPane" prefHeight="54.0" prefWidth="80.0" styleClass="bookmark-button" stylesheets="@../../../StyleCSS/Main.css" textOverrun="CLIP">
-                     <tooltip>
-                        <Tooltip text="Bookmark" />
-                     </tooltip>
-                     <VBox.margin>
-                        <Insets left="35.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="80.0" styleClass="game-button" stylesheets="@../../../StyleCSS/Main.css">
-                     <tooltip>
-                        <Tooltip text="Game" />
-                     </tooltip>
-                     <VBox.margin>
-                        <Insets left="35.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Button fx:id="translateButton" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="54.0" prefWidth="80.0" styleClass="translate-button" stylesheets="@../../../StyleCSS/Main.css">
-                     <tooltip>
-                        <Tooltip text="Translate" />
-                     </tooltip>
-                     <VBox.margin>
-                        <Insets left="35.0" top="10.0" />
-                     </VBox.margin>
-                  </Button>
-               </children>
-               <padding>
-                  <Insets top="20.0" />
-               </padding>
-            </VBox>
-            <VBox layoutY="317.0" prefHeight="90.0" prefWidth="150.0" AnchorPane.bottomAnchor="6.999999999999972" AnchorPane.leftAnchor="0.0">
-               <children>
-                  <Button fx:id="settingButton" mnemonicParsing="false" onAction="#showSettingPane" prefHeight="54.0" prefWidth="80.0" styleClass="setting-button" stylesheets="@../../../StyleCSS/Main.css">
-                     <VBox.margin>
-                        <Insets left="35.0" top="35.0" />
-                     </VBox.margin>
-                  </Button>
-               </children>
-            </VBox>
-         </children></AnchorPane>
+            <Button fx:id="searchButton" alignment="CENTER" mnemonicParsing="false" onAction="#showSearchPane" prefHeight="54.0" prefWidth="80.0" styleClass="search-button" stylesheets="@../../../StyleCSS/Main.css" textFill="#0a0a0a">
+               <tooltip>
+                  <Tooltip text="Search" />
+               </tooltip>
+               <VBox.margin>
+                  <Insets left="85.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="80.0" styleClass="game-button" stylesheets="@../../../StyleCSS/Main.css">
+               <tooltip>
+                  <Tooltip text="Game" />
+               </tooltip>
+               <VBox.margin>
+                  <Insets left="85.0" top="30.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="430.0" layoutY="134.0" prefHeight="200.0" prefWidth="235.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="134.0">
+         <children>
+            <Button fx:id="bookmarkButton" mnemonicParsing="false" onAction="#showBookmarkPane" prefHeight="54.0" prefWidth="80.0" styleClass="bookmark-button" stylesheets="@../../../StyleCSS/Main.css" textOverrun="CLIP">
+               <tooltip>
+                  <Tooltip text="Bookmark" />
+               </tooltip>
+            </Button>
+            <Button fx:id="translateButton" mnemonicParsing="false" onAction="#showTranslatePane" prefHeight="54.0" prefWidth="80.0" styleClass="translate-button" stylesheets="@../../../StyleCSS/Main.css">
+               <tooltip>
+                  <Tooltip text="Translate" />
+               </tooltip>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutX="506.0" layoutY="366.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <children>
+            <Button fx:id="settingButton" mnemonicParsing="false" onAction="#showSettingPane" prefHeight="54.0" prefWidth="80.0" styleClass="setting-button" stylesheets="@../../../StyleCSS/Main.css">
+               <HBox.margin>
+                  <Insets left="150.0" top="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
    </children>
 </AnchorPane>

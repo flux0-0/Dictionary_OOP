@@ -118,6 +118,14 @@ public class TranslateController {
     }
 
     @FXML
+    void swap() throws IOException {
+        if (text1 != null && text2 != null) {
+            String temp = text1.getText();
+            text1.setText(text2.getText());
+            text2.setText(temp);
+        }
+    }
+    @FXML
     void translate() throws IOException {
         if (!Objects.equals(area1.getText(), "")) {
             area2.setText(Translator.translate( text1.getText(), text2.getText(), area1.getText()));

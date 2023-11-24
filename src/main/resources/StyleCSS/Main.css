@@ -1,30 +1,69 @@
 .search-button {
-    -fx-graphic: url('../Image/search.png');
-    -fx-background-size: contain;
+    -fx-background-image: url('../Image/search.png');
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+    -fx-background-size: 25px;
+    -fx-background-color: #66CCCC;
+    -fx-background-radius: 10; /* Điều chỉnh độ cong của nút */
+    -fx-alignment: center;
+    -fx-pref-width: 150;
+    -fx-pref-height: 90;
+}
+.search-button:hover {
+    -fx-background-color: #99FFCC; /* Màu vàng nhạt khi hover */
 }
 .bookmark-button {
-    -fx-graphic: url('../Image/favourite.png');
-    -fx-background-size: contain;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-}
+    -fx-background-image: url('../Image/favourite.png');
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center;
+        -fx-background-size: 25px;
+        -fx-background-color: #66CCCC;
+        -fx-background-radius: 10; /* Điều chỉnh độ cong của nút */
+        -fx-alignment: center;
+        -fx-pref-width: 150;
+        -fx-pref-height: 90;
+    }
+.bookmark-button:hover {
+        -fx-background-color: #99FFCC;
+    }
 .game-button {
-    -fx-graphic: url('../Image/game12.png');
-    -fx-background-size: contain;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-}
+    -fx-background-image: url('../Image/game12.png');
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center;
+        -fx-background-size: 30px;
+        -fx-background-color: #66CCCC;
+        -fx-background-radius: 10; /* Điều chỉnh độ cong của nút */
+        -fx-alignment: center;
+        -fx-pref-width: 150;
+        -fx-pref-height: 90;
+    }
+    .game-button:hover {
+        -fx-background-color: #99FFCC; /* Màu vàng nhạt khi hover */
+    }
 .translate-button {
-    -fx-graphic: url('../Image/translate.png');
-    -fx-background-size: contain;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
-}
+    -fx-background-image: url('../Image/translate.png');
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center;
+        -fx-background-size: 25px;
+        -fx-background-color: #66CCCC;
+        -fx-background-radius: 10; /* Điều chỉnh độ cong của nút */
+        -fx-alignment: center;
+        -fx-pref-width: 150;
+        -fx-pref-height: 90;
+    }
+    .translate-button:hover {
+        -fx-background-color: #99FFCC; /* Màu vàng nhạt khi hover */
+    }
 .setting-button {
     -fx-graphic: url('../Image/setting.png');
     -fx-background-size: contain;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
+    -fx-background-color: #66CCCC;
+    -fx-background-radius: 10;
+    -fx-pref-width: 50;
+    -fx-pref-height: 50;
 }
+.setting-button:hover {
+        -fx-background-color: #99FFCC; /* Màu vàng nhạt khi hover */
+    }
