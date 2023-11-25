@@ -65,7 +65,7 @@ public class QuizController {
     }
 
     private void loadQuestions() {
-        if (counter < questions.size()) {
+        if (counter < 10) {
             opt5.setVisible(false);
             QuizQuestion currentQuestion = questions.get(counter);
             question.setText( (counter + 1) + ". " + currentQuestion.getQuestion());
