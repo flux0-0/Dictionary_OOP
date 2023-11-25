@@ -58,6 +58,8 @@ public class ResultController {
         } else if (correctf == 1) {
             remark.setText("Tuyệt vời! Chúc mừng bạn đã đạt điểm tuyệt đối! ");
         }
+        //reset wrong và correct
+        QuizController.resetValues();
     }
 
     private void handleZeroSum() {
