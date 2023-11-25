@@ -4,6 +4,7 @@ import Base.QuizQuestion;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -12,9 +13,11 @@ import javafx.stage.Stage;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.ResourceBundle;
 
 public class QuizController {
 
@@ -32,7 +35,6 @@ public class QuizController {
 
     @FXML
     private void initialize() {
-        //load file .txt chứa câu hỏi
         questions = readQuestionsFromFile("src/main/data/questions.txt");
         Collections.shuffle(questions); // Trộn danh sách câu hỏi
         loadQuestions();

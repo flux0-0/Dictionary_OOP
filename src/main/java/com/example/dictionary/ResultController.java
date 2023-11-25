@@ -79,7 +79,5 @@ public class ResultController {
             e.printStackTrace();
         }
     }
-
-
 }
 
