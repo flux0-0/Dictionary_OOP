@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="720.0" styleClass="background" stylesheets="@../../../StyleCSS/Quiz.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dictionary.QuizController">
+   <children>
+      <Label fx:id="question" alignment="CENTER" layoutX="90.0" layoutY="61.0" prefHeight="120.0" prefWidth="540.0" styleClass="quiz-label" stylesheets="@../../../StyleCSS/Quiz.css" text="1. How many consonants are there in the English Alphabets?" wrapText="true" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font name="Open Sans Semibold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="opt5" layoutX="321.0" layoutY="431.0" mnemonicParsing="false" onAction="#opt5clicked" prefHeight="34.0" prefWidth="77.0" styleClass="submit-button" stylesheets="@../../../StyleCSS/Quiz.css" text="Nộp bài" />
+      <VBox layoutX="99.0" layoutY="208.0" prefHeight="200.0" prefWidth="236.0" AnchorPane.leftAnchor="99.0">
+         <children>
+            <Button fx:id="opt1" mnemonicParsing="false" onAction="#opt1clicked" prefHeight="60.0" prefWidth="230.0" styleClass="answer-button" stylesheets="@../../../StyleCSS/Quiz.css" text="Button">
+               <font>
+                  <Font name="Open Sans Semibold" size="17.0" />
+               </font>
+            </Button>
+            <Button id="opt3" fx:id="opt3" mnemonicParsing="false" onAction="#opt3clicked" prefHeight="60.0" prefWidth="230.0" styleClass="answer-button" stylesheets="@../../../StyleCSS/Quiz.css" text="Button">
+               <font>
+                  <Font name="Open Sans Semibold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="385.0" layoutY="208.0" prefHeight="200.0" prefWidth="236.0" AnchorPane.rightAnchor="93.0">
+         <children>
+            <Button id="opt2" fx:id="opt2" mnemonicParsing="false" onAction="#opt2clicked" prefHeight="60.0" prefWidth="230.0" styleClass="answer-button" stylesheets="@../../../StyleCSS/Quiz.css" text="Button">
+               <font>
+                  <Font name="Open Sans Semibold" size="17.0" />
+               </font>
+            </Button>
+            <Button id="opt4" fx:id="opt4" mnemonicParsing="false" onAction="#opt4clicked" prefHeight="60.0" prefWidth="230.0" styleClass="answer-button" stylesheets="@../../../StyleCSS/Quiz.css" text="Button">
+               <font>
+                  <Font name="Open Sans Semibold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

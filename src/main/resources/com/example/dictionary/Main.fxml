@@ -56,7 +56,7 @@
                   <Insets left="85.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="54.0" prefWidth="80.0" styleClass="game-button" stylesheets="@../../../StyleCSS/Main.css">
+            <Button fx:id="gameButton" mnemonicParsing="false" onAction="#showGamePane" prefHeight="54.0" prefWidth="80.0" styleClass="game-button" stylesheets="@../../../StyleCSS/Main.css">
                <tooltip>
                   <Tooltip text="Game" />
                </tooltip>

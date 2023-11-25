@@ -130,5 +130,23 @@ public class MainController {
             e.printStackTrace();
         }
     }
+    @FXML
+    public void showGamePane(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+            Parent settingRoot = loader.load();
+
+            Scene settingScene = new Scene(settingRoot);
+
+            Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            primaryStage.setScene(settingScene);
+            primaryStage.setTitle("Game");
+
+            primaryStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
