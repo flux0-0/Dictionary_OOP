@@ -121,6 +121,11 @@ public class QuizController {
     }
 
     private void displayResultScene(ActionEvent event) {
+        // Sau khi load hết câu hỏi thì load các câu hỏi từ đầu
+        questions = readQuestionsFromFile("src/main/data/questions.txt");
+        Collections.shuffle(questions); // Trộn danh sách câu hỏi
+        counter = 0; // Khởi tạo lại biến đếm
+        //In số câu hỏi đúng sai 
         System.out.println("Correct Answers: " + correct);
         System.out.println("Wrong Answers: " + wrong);
         Stage thisStage = (Stage) ((Button) event.getSource()).getScene().getWindow();
@@ -146,6 +151,12 @@ public class QuizController {
                 wrong++;
             }
         }
+    }
+
+    //Reset lại số câu trả lời đúng và sai  
+    public static void resetValues() {
+        correct = 0;
+        wrong = 0;
     }
 }
 
